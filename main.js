@@ -1,9 +1,10 @@
-    const TelegramBot = require('node-telegram-bot-api');
-    const token = process.env.BOT_TOKEN;
-    const bot = new TelegramBot(token, {polling: true});
+const TelegramBot = require('node-telegram-bot-api');
+const token = process.env.BOT_TOKEN;
 
-    bot.onText(/\/start/, (msg) => {
-      bot.sendMessage(msg.chat.id, "Ayaz King 👑 Bot V2 Live hai!");
-    });
+const bot = new TelegramBot(token, {polling: true});
 
-    console.log('Bot V2 chal gaya...');
+bot.onText(/\/start/, (msg) => {
+  bot.sendMessage(msg.chat.id, "Ayaz King 👑 Bot V2 Live hai!");
+});
+
+console.log('Bot is running with Polling...');
